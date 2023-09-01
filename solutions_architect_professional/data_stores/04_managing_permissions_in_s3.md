@@ -84,12 +84,12 @@ end
 
 ## Things to Take Away
 - Access to an S3 bucket can be given via Bucket Policies or IAM roles
-    - Explicitly allows or denies access to principles with bucket policies.
+    - Explicitly allows or denies access to principals with bucket policies.
     - Bucket policies take precedence over principals and IAM policies
     - IAM roles can grant access if it's not denied by bucket policies
 - Cross account access is possible via Trust Policies and IAM roles
-    - Trust policies and IAM roles grant principles access to S3 objects even if it is not the same AWS account
-    - Trust policies can specify which principles are allowed to assume the role to access S3 objects
+    - Trust policies and IAM roles grant principals access to S3 objects even if it is not the same AWS account
+    - Trust policies can specify which principals are allowed to assume the role to access S3 objects
     - These trusts policies are more secure than bucket policies because the access keys associated with IAM roles are constantly rotated
 - Efficiency is increased by using S3 endpoints
     - Sending data through the public web is expensive
