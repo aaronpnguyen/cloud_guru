@@ -4,7 +4,7 @@
 
 - Bucket Policies (Resource based)
     - Defined at the bucket resources
-        - Give a principal access to all objects or a subset of objects in a bucket
+        - Give a principal[^1] access to all objects or a subset of objects in a bucket
         - Can explictly allow or deny access
         - Overrides all permissions that are granted
 
@@ -94,3 +94,5 @@ end
 - Efficiency is increased by using S3 endpoints
     - Sending data through the public web is expensive
     - Easier, cheaper, and faster to use an elastic network interface to traverse AWS' private intranet
+
+[^1]: The Principal element specifies the user, account, service, or other entity that is allowed or denied access to a resource. The following are examples of specifying Principal.
