@@ -57,7 +57,7 @@ end
 ```
 
 > [!NOTE]
-> - Can give access through IAM roles, though most common, users use the Managed Microsoft AD that is already being used for their Windows servers.
+> - Can give access through IAM roles, though most commonly, users use the Managed Microsoft AD that is already being used for their Windows servers.
 > - Lustre uses SSDs to hold redundant data instead of automatically storing it with the original data, it also leverages S3 as a cold storage to store snapshots and less-frequently accessed files in the system.
 
 ## Exploring Use Cases
