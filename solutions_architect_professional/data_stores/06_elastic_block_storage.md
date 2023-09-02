@@ -3,6 +3,8 @@
 - Can only be used with EC2
 - Tied to a single availability zone
 - Variety of optomized choices for IOPS, throughput, and costs
+- Space must be provisioned when first setting up a volume
+    - Users will be billed for all the space provisioned, it is not pay for what you use
 
 ## EBS vs Instance Store
 - Instance store
