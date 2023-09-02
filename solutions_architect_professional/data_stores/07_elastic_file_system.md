@@ -13,9 +13,9 @@
 
 
 > [!NOTE]
-> EFS costs are usually three times more expensive than elastic block storage (EBS)
-> EFS costs are usually 20 times more expensive than S3
-> Some NFS features are not supported
+> - EFS costs are usually three times more expensive than elastic block storage (EBS)
+> - EFS costs are usually 20 times more expensive than S3
+> - Some NFS features are not supported
 ---
 
 ## Use Case
