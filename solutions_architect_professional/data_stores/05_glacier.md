@@ -23,7 +23,7 @@
 - Glacier Vault Lock
     - Immutable/permanent
     - Can be overwritten or deleted
-    - When itiated, there is a 24 hour timeout to confirm that the lock performs
+    - When initiated, there is a 24 hour timeout to confirm that the lock performs
         - Within the 24 hours, the lock can be aborted
         - If the lock is not confirmed, it will abort
     - Completing the lock applies the vault lock permanently
