@@ -33,6 +33,11 @@
 - Serverless, AWS handles scaling
     - Automatically scales the processing and data storage
 
+### Glue Data Quality
+- Glue data quality provides data quality recommendations and predfined rules
+- Helps ensure quality of Glue data
+- Can set up alerts and data quality metrics to provide confidence
+
 ```mermaid
 flowchart LR
 
@@ -85,6 +90,55 @@ If the data is still not in the form needed, a Glue ETL job can be leveraged via
 These services can be the final destination, but if needed, can be delivered to a data consumer tool such as QuickSite
 
 ## Athena
+- Known to analyze petabyte-scale data where it lives
+- Serverless big data querying service
+- Designed to create databases from S3
+    - Can use standard SQL to create queries from S3
+- Can run Spark code with Apache Spark on Athena
+    - This allows the ability to use Spark against S3
 
+> [!NOTE]
+> While Athena is designed for S3, users can still use it to analyze data from 25+ different data sources
+
+```mermaid
+flowchart LR
+a(S3)
+b(Lake Formation)
+c(Operational Databases)
+d(Athena)
+e(BI & Analytics)
+f(SageMaker)
+g(QuickSight)
+
+
+subgraph Sources
+    a
+    b
+    c
+end
+
+Sources --> d
+
+subgraph Consumers
+    e
+    f
+    g
+end
+
+d --> Consumers
+```
+
+**Example:**
+Athena can act as an abstraction layer on top of data sources where SQL queries can be performed.
+These results, usually subsets of data, can be plugged directly into consuming sources.
 
 ## Things to Take Away
+- Most data ecosystems require some ETL
+    - Collecting data is only valuable so long as you can draw insights from it
+    - ETL can get data from raw to a curated state
+- AWS Glue is a serverless ETL solution
+    - Glue is a powerfull tool for crawling, cataloging, and transforming data from many different sources
+    - Integrates with many other AWS services
+- Athena extracts at a petabyte scale
+    - Most use cases involve querying S3 objects
+    - Can be used to perform federated queries on many data sources
